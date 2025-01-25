@@ -3,12 +3,8 @@ import { getCollectionDetails } from "@/lib/actions";
 import Image from "next/image";
 import React from "react";
 
-const CollectionDetails = async ({
-  params,
-}: {
-  params: any
-}) => {
-   const { collectionId } = await params;
+const CollectionDetails = async ({ params }: { params: any }) => {
+  const { collectionId } = await params;
   const collectionDetails = await getCollectionDetails(collectionId);
 
   return (

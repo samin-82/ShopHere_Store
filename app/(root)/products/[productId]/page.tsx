@@ -4,14 +4,10 @@ import ProductInfo from "@/components/ProductInfo";
 // import ProductInfo from "@/components/ProductInfo";
 import { getProductDetails, getRelatedProducts } from "@/lib/actions";
 
-const ProductDetails = async ({
-  params,
-}: {
-  params: any;
-}) => {
-   const { productId } = await params;
+const ProductDetails = async ({ params }: { params: any }) => {
+  const { productId } = await params;
   const productDetails = await getProductDetails(productId);
-//   const relatedProducts = await getRelatedProducts(params.productId);
+  //   const relatedProducts = await getRelatedProducts(params.productId);
 
   return (
     <>
