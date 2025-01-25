@@ -1,8 +1,9 @@
 import ProductCard from "@/components/ProductCard";
 import { getSearchedProducts } from "@/lib/actions";
 
-const SearchPage = async ({ params }: { params: { query: string } }) => {
-  const searchedProducts = await getSearchedProducts(params.query);
+const SearchPage = async ({ params }: { params:any }) => {
+   const { query } = await params;
+  const searchedProducts = await getSearchedProducts(query);
 
 //   const decodedQuery = decodeURIComponent(params.query);
 

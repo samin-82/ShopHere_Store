@@ -32,7 +32,7 @@ const Navbar = () => {
           Home
         </Link>
         <Link
-          href={user ? "/wishlist" : "/sign-in"}
+          href={"/"}
           className={`hover:text-red-1 ${
             pathname === "/wishlist" && "text-red-1"
           }`}

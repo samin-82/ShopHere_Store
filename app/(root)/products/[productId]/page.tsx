@@ -7,9 +7,10 @@ import { getProductDetails, getRelatedProducts } from "@/lib/actions";
 const ProductDetails = async ({
   params,
 }: {
-  params: { productId: string };
+  params: any;
 }) => {
-  const productDetails = await getProductDetails(params.productId);
+   const { productId } = await params;
+  const productDetails = await getProductDetails(productId);
 //   const relatedProducts = await getRelatedProducts(params.productId);
 
   return (
